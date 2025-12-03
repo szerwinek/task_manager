@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Dodaj zadanie</h2>
+
+<form method="POST" class="card p-4 w-50 mx-auto shadow-sm">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button class="btn btn-primary mt-3">Dodaj</button>
+</form>
+{% endblock %}
